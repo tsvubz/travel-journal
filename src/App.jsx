@@ -1,11 +1,13 @@
-import Navbar from "./components/Navbar"
+
+import Travel from "./components/Travel"
 
 
 function App() {
   
   return (
     <>
-      <Navbar />
+      <Travel />
+      
     </>
   )
 }

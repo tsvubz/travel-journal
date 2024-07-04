@@ -18,11 +18,12 @@ body {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #918E9B;
   text-decoration: inherit;
+  transition: 0.2s;
 }
 a:hover {
-  color: #535bf2;
+  color: #484552;
 }
 
 nav{
@@ -37,5 +38,45 @@ nav{
   padding-right: 0.4rem;
   font-size: 1.5rem;
 }
-
-
+.card-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 0px;
+  gap: 2rem;
+  height: 16rem;
+}
+.card-image-container{
+  height: 15rem;
+  border-radius: 8px;
+}
+.card-image{
+  height: 100%;
+  border-radius: 12px;
+}
+.card-info-container{
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+.card-location{
+  margin-bottom: -16px;
+}
+.location{
+  letter-spacing: 0.09em;
+}
+.card-title{
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 24px;
+}
+.card-map{
+  padding-left: 8px;
+  text-decoration: underline;
+}
+.card-text, .card-date{
+  font-size: small;
+}
+.card-date{
+  margin-bottom: -8px;
+}

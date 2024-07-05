@@ -52,6 +52,7 @@ nav{
 }
 .card-image{
   height: 100%;
+  width: 10rem;
   border-radius: 12px;
 }
 .card-info-container{

@@ -1,32 +1,38 @@
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import mountFiji from '../../public/images/mount-fuji.png'
 
-function Card() {
+function Card(props) {
 
     
 
   return (
     <div className='card-container'>
         <div className='card-image-container'>
-            <img src={mountFiji} alt="Mount Fuji" className='card-image'/>
+            <img src={`../../images/${props.img}`} alt="Mount Fuji" className='card-image'/>
         </div>
         <div className='card-info-container'>
             <div className='card-location'>
                 <span><FontAwesomeIcon icon={faLocationDot} style={{color: "#F55A5A"}}/> </span>
-                <span className='location'>JAPAN</span>
-                <span><a href="https://goo.gl/maps/1DGM5WrWnATgkSNB8" target='_blank' className='card-map'>View on Google Maps</a></span>
+                <span className='location'>{props.country}</span>
+                <span><a href={props.link} target='_blank' className='card-map'>View on Google Maps</a></span>
             </div>
-            <h2 className='card-title'>Mount Fuji</h2>
-            <p className='card-date'><strong>12 Jan, 2021 - 24 Jan, 2021</strong></p>
-            <p className='card-text'>
-                Mount Fuji is the tallest mountain in Japan, standing at 3,776
-                meters (12,380 feet). Mount Fuji is the single most popular 
-                tourist site in Japan, for both Japanese and foreign tourists.
-            </p>
+            <h2 className='card-title'>{props.title}</h2>
+            <p className='card-date'><strong>{props.startDate} - {props.endDate}</strong></p>
+            <p className='card-text'>{props.text}</p>
         </div>
     </div>
   )
+}
+
+Card.propTypes = {
+    img: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    startDate: PropTypes.string.isRequired,
+    endDate: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
 }
 
 export default Card
